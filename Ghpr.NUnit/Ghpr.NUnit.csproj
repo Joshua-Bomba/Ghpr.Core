@@ -79,9 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Ghpr.NUnit.Settings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Ghpr.NUnit.nuspec">
       <SubType>Designer</SubType>
     </None>
