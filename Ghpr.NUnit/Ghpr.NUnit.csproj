@@ -82,6 +82,9 @@
     <None Include="Ghpr.NUnit.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Ghpr.Nunit.Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="nunit.nuget.addins">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -90,13 +93,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Ghpr.Core\Ghpr.Core.csproj">
       <Project>{8cde51df-b9d2-4945-a992-35e33decef36}</Project>
       <Name>Ghpr.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
