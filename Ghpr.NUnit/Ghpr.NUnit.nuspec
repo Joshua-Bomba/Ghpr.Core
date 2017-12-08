@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/GHPReporter/Ghpr.NUnit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/GHPReporter/Ghpr.NUnit</projectUrl>
+    <iconUrl>https://github.com/GHPReporter/GHPReporter.github.io/blob/master/img/logo-small.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easy-to-use test run reporter for NUnit 3</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright Evgeniy Kosjakov © 2016-2017</copyright>
+    <tags>.NET package HTML report reporting tool NUnit</tags>
+    <dependencies>
+      <dependency id="Ghpr.Core" version="0.8.0.0" />
+      <dependency id="NUnit" version="3.9.0" />
+      <dependency id="NUnit.Engine" version="3.7.0" />
+      <dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Ghpr.NUnit.dll" target="lib" />
+    <file src="bin\Release\Ghpr.NUnit.Settings.json" target="content" />
+  </files>
+</package>
