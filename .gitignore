@@ -259,5 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/Ghpr.Controller.ts/report/
 /build
+/Ghpr.Controller.ts/wwwroot/
