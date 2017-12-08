@@ -1,3 +1,4 @@
 ../../NUnit.Extension.*/**/tools/     # nuget v2 layout
 ../../../NUnit.Extension.*/**/tools/  # nuget v3 layout
 Ghpr.NUnit.dll
+nunit-v2-result-writer.dll
