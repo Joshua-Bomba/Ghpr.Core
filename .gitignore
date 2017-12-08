@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /build
 /Report/wwwroot
+/Ghpr.Controller.ts/wwwroot
