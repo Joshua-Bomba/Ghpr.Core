@@ -1,0 +1,38 @@
+-
+  branches:
+    only:
+    - nuget  
+  
+  before_build:
+    - nuget restore Ghpr.Core/Ghpr.Core.sln
+
+  build_script: 
+    - msbuild Ghpr.Core/Ghpr.Core.sln /p:Configuration=Release-NET40 /t:Rebuild
+    - msbuild Ghpr.Core/Ghpr.Core.sln /p:Configuration=Release-NET452 /t:Rebuild
+
+  after_build:
+    - nuget pack "Ghpr.Core/Ghpr.Core.csproj" -Prop Configuration=Release-NET452;OutDir=bin\Release-NET452
+
+  artifacts:
+    - path: '*.nupkg'
+      name: nupkg
+
+  deploy:
+    provider: NuGet
+    server: 
+    api_key:
+      secure: crLYbWXNgfrzYazkV18cEBRKnl90ee0wjWUfZGIDhkZcZg1ZlGbbsqRdr8JLmU3O
+    skip_symbols: false
+    artifact: nupkg
+    
+-
+  branches:
+    except:
+    - nuget 
+    
+  before_build:
+    - nuget restore Ghpr.Core/Ghpr.Core.sln
+
+  build_script: 
+    - msbuild Ghpr.Core/Ghpr.Core.sln /p:Configuration=Release-NET40 /t:Rebuild
+    - msbuild Ghpr.Core/Ghpr.Core.sln /p:Configuration=Release-NET452 /t:Rebuild
