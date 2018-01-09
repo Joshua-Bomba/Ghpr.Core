@@ -5,5 +5,5 @@
   "runGuid": "",
   "realTimeGeneration": "True",
   "runsToDisplay": "10",
-  "testsToDisplay": "10"
+  "testsToDisplay": "1000"
 }
